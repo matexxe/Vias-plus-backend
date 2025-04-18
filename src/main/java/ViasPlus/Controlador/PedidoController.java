@@ -1,7 +1,6 @@
 package ViasPlus.Controlador;
 
 import ViasPlus.DTO.PedidoDTO;
-import ViasPlus.Modelo.Pedido;
 import ViasPlus.Respuesta.PedidoResponse;
 import ViasPlus.Servicio.PedidoService;
 import jakarta.validation.Valid;
@@ -23,7 +22,7 @@ public class PedidoController {
      * Registrar un nuevo pedido usando un DTO.
      */
     @PostMapping
-    public ResponseEntity<Pedido> registrarPedido(@RequestBody PedidoDTO pedidoDTO, UriComponentsBuilder uriComponentsBuilder) {
+    public ResponseEntity<?> registrarPedido(@RequestBody PedidoDTO pedidoDTO, UriComponentsBuilder uriComponentsBuilder) {
         return pedidoService.registrarPedido(pedidoDTO, uriComponentsBuilder);
     }
 

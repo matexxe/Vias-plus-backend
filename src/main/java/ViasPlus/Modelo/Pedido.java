@@ -14,7 +14,7 @@ public class Pedido {
 
     @ManyToOne
     @JoinColumn(name = "cliente_id", nullable = false)
-    private Clientes cliente;
+    private Cliente cliente;
 
     @ManyToOne
     @JoinColumn(name = "conductor_id", nullable = false)  // Relación con Conductor
@@ -33,7 +33,7 @@ public class Pedido {
     }
 
     //  Constructor
-    public Pedido(Clientes cliente, Conductor conductor, String direccion, EstatusPedido estatus,
+    public Pedido(Cliente cliente, Conductor conductor, String direccion, EstatusPedido estatus,
                   String articulo, String negocio, LocalDate fecha) {
         this.cliente = cliente;
         this.conductor = conductor;
@@ -52,11 +52,11 @@ public class Pedido {
         this.id = id;
     }
 
-    public Clientes getCliente() {
+    public Cliente getCliente() {
         return cliente;
     }
 
-    public void setCliente(Clientes cliente) {
+    public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
 

@@ -1,7 +1,7 @@
 package ViasPlus.Servicio;
 
 import ViasPlus.Respuesta.ClienteResponse;
-import ViasPlus.Modelo.Clientes;
+import ViasPlus.Modelo.Cliente;
 import ViasPlus.DTO.DataClientes;
 import ViasPlus.Repositorio.ClienteRepository;
 import jakarta.transaction.Transactional;
@@ -33,7 +33,7 @@ public class ClienteService {
 
 
             // Crear nuevo cliente
-            Clientes cliente = new Clientes(dataClientes);
+            Cliente cliente = new Cliente(dataClientes);
             cliente.setNombre(dataClientes.nombre());
             cliente.setCorreo(dataClientes.correo());
             cliente.setDireccion(dataClientes.direccion());
@@ -53,7 +53,7 @@ public class ClienteService {
         }
     }
 
-    public List<Clientes> listarClientes() {
+    public List<Cliente> listarClientes() {
         return clienteRepository.findAll();
     }
 

@@ -1,11 +1,11 @@
 package ViasPlus.Repositorio;
 
-import ViasPlus.Modelo.Clientes;
+import ViasPlus.Modelo.Cliente;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 
-public interface ClienteRepository extends JpaRepository<Clientes, Long> {
-    Optional<Clientes> findByNombre(String nombre);
-    Optional<Clientes> findByCorreo(String correo);
+public interface ClienteRepository extends JpaRepository<Cliente, Long> {
+    Optional<Cliente> findByNombre(String nombre);
+    Optional<Cliente> findByCorreo(String correo);
 }
 

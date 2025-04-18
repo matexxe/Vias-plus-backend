@@ -1,8 +1,8 @@
 package ViasPlus.Servicio;
 
 import ViasPlus.DTO.PedidoDTO;
-import ViasPlus.Estatus.EstatusPedido;
-import ViasPlus.Modelo.Clientes;
+
+import ViasPlus.Modelo.Cliente;
 import ViasPlus.Modelo.Conductor;
 import ViasPlus.Modelo.Pedido;
 import ViasPlus.Repositorio.ClienteRepository;
@@ -38,8 +38,8 @@ public class PedidoService {
      * Registrar un nuevo pedido.
      */
     @Transactional
-    public ResponseEntity<Pedido> registrarPedido(PedidoDTO pedidoDTO, UriComponentsBuilder uriComponentsBuilder) {
-        Optional<Clientes> clienteOpt = clienteRepository.findById(pedidoDTO.cliente_id());
+    public ResponseEntity<?> registrarPedido(PedidoDTO pedidoDTO, UriComponentsBuilder uriComponentsBuilder) {
+        Optional<Cliente> clienteOpt = clienteRepository.findById(pedidoDTO.cliente_id());
         Optional<Conductor> conductorOpt = conductorRepository.findById(pedidoDTO.conductor_id());
 
         if (clienteOpt.isEmpty() || conductorOpt.isEmpty()) {
@@ -50,7 +50,7 @@ public class PedidoService {
                 clienteOpt.get(),
                 conductorOpt.get(),
                 pedidoDTO.direccion(),
-                EstatusPedido.EN_PROCESO, // Estatus por defecto
+                pedidoDTO.estatus(),
                 pedidoDTO.articulo(),
                 pedidoDTO.negocio(),
                 LocalDate.now()
@@ -88,7 +88,7 @@ public class PedidoService {
     @Transactional
     public ResponseEntity<?> actualizarPedido(Long id, PedidoDTO pedidoDTO) {
         Optional<Pedido> pedidoOpt = pedidoRepository.findById(id);
-        Optional<Clientes> clienteOpt = clienteRepository.findById(pedidoDTO.cliente_id());
+        Optional<Cliente> clienteOpt = clienteRepository.findById(pedidoDTO.cliente_id());
         Optional<Conductor> conductorOpt = conductorRepository.findById(pedidoDTO.conductor_id());
 
         if (pedidoOpt.isEmpty() || clienteOpt.isEmpty() || conductorOpt.isEmpty()) {
@@ -99,6 +99,7 @@ public class PedidoService {
         pedido.setCliente(clienteOpt.get());
         pedido.setConductor(conductorOpt.get());
         pedido.setDireccion(pedidoDTO.direccion());
+        pedido.setEstatus(pedidoDTO.estatus()); // Línea añadida para actualizar el estatus
         pedido.setArticulo(pedidoDTO.articulo());
         pedido.setNegocio(pedidoDTO.negocio());
 
@@ -120,7 +121,7 @@ public class PedidoService {
     }
 
     /**
-     * Método auxiliar para crear un PedidoResponse SIN calificación.
+     * Método auxiliar para crear un PedidoResponse.
      */
     private PedidoResponse crearPedidoResponse(Pedido pedido) {
         // Crear ClienteResponse
@@ -134,7 +135,9 @@ public class PedidoService {
         ConductorResponse conductorResponse = new ConductorResponse(
                 pedido.getConductor().getId(),
                 pedido.getConductor().getNombre(),
-                pedido.getConductor().getLicencia()
+                pedido.getConductor().getLicencia(),
+                pedido.getConductor().getEntregasTotales(),
+                pedido.getConductor().getCalificacion()
         );
 
         // Crear y devolver PedidoResponse

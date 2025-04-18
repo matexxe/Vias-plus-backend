@@ -7,7 +7,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "clientes")
-public class Clientes {
+public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -19,10 +19,10 @@ public class Clientes {
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Pedido> pedidos;
 
-    public Clientes() {
+    public Cliente() {
     }
     // Constructor
-    public Clientes(DataClientes data) {
+    public Cliente(DataClientes data) {
         this.nombre = data.nombre();
         this.correo = data.correo();
         this.direccion = data.direccion();

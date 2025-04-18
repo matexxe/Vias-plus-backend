@@ -13,7 +13,10 @@ public class Conductor {
 
     private String nombre;
     private String licencia;
-    private int entregasTotales;
+
+    @Column(name = "entregas_totales")
+    private String entregasTotales;
+
     private double calificacion;
 
     @OneToMany(mappedBy = "conductor", cascade = CascadeType.ALL, orphanRemoval = true)
@@ -24,7 +27,7 @@ public class Conductor {
     }
 
     // 🔹 Constructor con parámetros
-    public Conductor(String nombre, String licencia, int entregasTotales, double calificacion) {
+    public Conductor(String nombre, String licencia, String entregasTotales, double calificacion) {
         this.nombre = nombre;
         this.licencia = licencia;
         this.entregasTotales = entregasTotales;
@@ -56,11 +59,11 @@ public class Conductor {
         this.licencia = licencia;
     }
 
-    public int getEntregasTotales() {
+    public String getEntregasTotales() {
         return entregasTotales;
     }
 
-    public void setEntregasTotales(int entregasTotales) {
+    public void setEntregasTotales(String entregasTotales) {
         this.entregasTotales = entregasTotales;
     }
 

@@ -49,7 +49,9 @@ public class ConductorController {
         return ResponseEntity.created(location).body(new ConductorResponse(
                 nuevoConductor.getId(),
                 nuevoConductor.getNombre(),
-                nuevoConductor.getLicencia()
+                nuevoConductor.getLicencia(),
+                nuevoConductor.getEntregasTotales(),
+                nuevoConductor.getCalificacion()
         ));
     }
 
@@ -77,7 +79,9 @@ public class ConductorController {
         return new ConductorResponse(
                 conductor.getId(),
                 conductor.getNombre(),
-                conductor.getLicencia()
+                conductor.getLicencia(),
+                conductor.getEntregasTotales(),
+                conductor.getCalificacion()
         );
     }
 }
