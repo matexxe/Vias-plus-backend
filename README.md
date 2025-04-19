@@ -1,5 +1,20 @@
-# ViasPlus Backend
 
+## 📚 Índice de Contenido
+
+- [📌 Descripción del proyecto](#-descripción-del-proyecto-de-viasplus)
+- [🎯 Objetivo de la fase](#-objetivo-de-la-fase)
+- [🔍 Propósito del testeo](#-propósito-del-testeo)
+- [👤 Entidad clientes](#-entidad-clientes)
+  - [Registrar un cliente](#registrar-un-cliente)
+  - [Consultar registrados](#consultar-cuantos-están-registrados-en-la-base-de-datos)
+  - [Actualizar información](#actualizar-información)
+  - [Eliminar cliente](#eliminar-cliente)
+- [🚚 Entidad conductores](#-entidad-conductores)
+  - [Consultar conductores](#consultar-conductores-registrados)
+- [📦 Entidad pedidos](#-entidad-pedidos)
+  - [Registrar pedidos](#registrar-pedidos)
+  - [Actualizar pedido](#actualizar-pedido)
+  - [Eliminar pedido](#eliminar-pedido)
 ---
 
 ## 📌 Descripción del proyecto de ViasPlus
