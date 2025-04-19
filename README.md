@@ -82,3 +82,8 @@ El objetivo de esta fase de prueba es:
 ### Eliminar pedido:
 
 ![Image](https://github.com/user-attachments/assets/73347b02-53d8-4f9b-a795-03c48e2ac411)
+
+
+# Tecnologias usadas:
+* Java
+* SpringBoot
