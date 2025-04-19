@@ -24,7 +24,7 @@ Su propósito principal es brindar un seguimiento en tiempo real del estado de l
 
 ## 🎯 Objetivo de la fase
 
-En esta fase del desarrollo de ViasPlus, nos enfocaremos en probar y validar una API que implementa operaciones CRUD (Crear, Leer, Actualizar, Eliminar) para las siguientes entidades principales:
+En esta fase del desarrollo de ViasPlus, nos enfocaremos en probar y validar una API que implementa operaciones CRUD (Crear, leer, actualizar, eliminar) para las siguientes entidades principales:
 
 - Clientes
 - Conductores
