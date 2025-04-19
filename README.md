@@ -41,21 +41,21 @@ El objetivo de esta fase de prueba es:
 
 ## 👤 Entidad clientes
 
-### Registrar un cliente
+### Registrar un cliente:
 
 ![Image](https://github.com/user-attachments/assets/5be73ee2-e43a-4e8a-8e4d-0f91c22aad0d)
 
-### Consultar cuántos están registrados en la base de datos
+### Consultar cuántos están registrados en la base de datos:
 
 ![Image](https://github.com/user-attachments/assets/b653db2a-db15-46fd-920d-c8951f02b5eb)
 
-### Actualizar información
+### Actualizar información:
 
 (se va a corregir en este caso, el email):
 
 ![Captura de pantalla 2025-04-17 190415](https://github.com/user-attachments/assets/1b962629-2a1d-4758-80a5-b694bbe71ad2)
 
-### Eliminar cliente
+### Eliminar cliente:
 
 ![Image](https://github.com/user-attachments/assets/5195491b-b220-4140-ab2a-e56f4325b7de)
 
@@ -63,7 +63,7 @@ El objetivo de esta fase de prueba es:
 
 ## 🚚 Entidad conductores
 
-### Consultar conductores registrados
+### Consultar conductores registrados:
 
 ![Image](https://github.com/user-attachments/assets/46226818-d357-492e-9063-85d90eb99b54)
 
@@ -71,14 +71,14 @@ El objetivo de esta fase de prueba es:
 
 ## 📦 Entidad pedidos
 
-### Registrar pedidos
+### Registrar pedidos:
 
 ![Image](https://github.com/user-attachments/assets/641d9831-8de7-4f62-9d45-90101c269daf)
 
-### Actualizar pedido
+### Actualizar pedido:
 
 ![Captura de pantalla 2025-04-17 193803](https://github.com/user-attachments/assets/62d12067-41a4-4f23-b860-dec89a75e81d)
 
-### Eliminar pedido
+### Eliminar pedido:
 
 ![Image](https://github.com/user-attachments/assets/73347b02-53d8-4f9b-a795-03c48e2ac411)
