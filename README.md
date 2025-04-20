@@ -38,7 +38,10 @@ El objetivo de esta fase de prueba es:
 - Comprobar que las relaciones entre las entidades funcionan (por ejemplo, asignación de un conductor a un pedido).
 
 ---
+## Modelo entidad-relacion:
+![Image](https://github.com/user-attachments/assets/96c27e47-363a-4fae-a324-8df0eb1d6c06)
 
+---
 ## 👤 Entidad clientes
 
 ### Registrar un cliente:
